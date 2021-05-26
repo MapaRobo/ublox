@@ -1,5 +1,19 @@
+# Configuration Settings for ZED-F9P device
+
+debug: 1                    # Range 0-4 (0 means no debug statements will print)
+
 device: /dev/ttyACM0
 frame_id: gps
+dynamic_model: pedestrian   # Pedestrian Dynamic Model Setting Assumes:
+                            # Max altitude (m): 9000
+                            # Max Horizontal Velocity (m/s): 30
+                            # Max Vertical Velocity (m/s): 20
+                            # Sanity check Type: Altitude and Velocity
+                            # Max Position Deviation: Small
+
+rate: 4                     # Measurement rate in Hz
+nav_rate: 4                 # in number of measurement cycles
+
 uart1:
   baudrate: 38400
 config_on_startup: false
